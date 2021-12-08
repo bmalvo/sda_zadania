@@ -1,6 +1,6 @@
 import pytest
 
-from electronic_devices.calculator import Calculator, NoBatteryError
+from electronic_devices.calculator import Calculator, NoBatteryError, DividedError
 
 
 @pytest.fixture()
@@ -18,6 +18,8 @@ def test_init_calculator(calc):
 def test_init_calculator_raise_value_error(given_value, expected_value):
     with pytest.raises(expected_value):
         calc = Calculator(battery=given_value)
+
+
 
 
 def test_check_add_5_3_return_8(calc):
@@ -63,3 +65,21 @@ def test_check_divide(given_values,expected_result, calc):
     assert calc.divide(dividend, divisor) == expected_result
     assert calc.memory == expected_result
     assert calc.battery == 99
+
+@pytest.mark.parametrize("given_values,expected_result",
+                         [(1,1),(2,4),(3,9),(4,16),(0,0)])
+def test_check_square(given_values,expected_result, calc):
+    assert calc.square(given_values) == expected_result
+    assert calc.memory == expected_result
+    assert calc.battery == 99
+
+@pytest.mark.parametrize("given_values,expected_result",
+                         [((1,1), 1), ((2,3), 8), ((4,7), 16384),((4,0),1),((-4,3),-64)])
+def test_check_n_to_the_power_of(given_values,expected_result, calc):
+    n = given_values[0]
+    power = given_values[1]
+    assert calc.n_to_the_power_of(n, power) == expected_result
+    assert calc.memory == expected_result
+    assert calc.battery == 99
+
+

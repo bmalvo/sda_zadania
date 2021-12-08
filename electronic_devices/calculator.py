@@ -1,3 +1,5 @@
+from math import pow
+
 class NoBatteryError(ValueError):
     pass
 
@@ -51,7 +53,22 @@ class Calculator:
         self.battery -= 1
         if divisor == 0:
             raise DividedError("Pamiętaj cholero nie dziel przez zero!")
-        result = dividend/divisor
+        else:
+            result = dividend/divisor
+        self.memory = result
+        return result
+
+    def square(self, n):
+        self.check_battery()
+        self.battery -= 1
+        result = n*n
+        self.memory = result
+        return result
+
+    def n_to_the_power_of(self,n, power):
+        self.check_battery()
+        self.battery -= 1
+        result = pow(n,power)
         self.memory = result
         return result
 
