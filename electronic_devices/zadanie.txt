@@ -17,11 +17,11 @@ class NoBatteryError(Exception):
 /Metoda divide() - dzielenie dwóch liczb - ma wyrzucać wyjątek ValueError
 jeżeli nastąpi próba dzielenia przez 0 z wiadomością Pamiętaj cholero
 nie dziel przez zero!(Zrobić testa!!!!!!)
-Metoda square() - zwraca kwadrat z podanej liczby
+/Metoda square() - zwraca kwadrat z podanej liczby
 ----------------------
-Metoda n_to_the_power_of() - zwraca liczbę podniesioną do podanej potęgi
-Metoda is_even() - zwracająca boolean czy podana liczba jest parzysta
-Metoda check_battery() - metoda sprawdzająca poziom baterii
+/Metoda n_to_the_power_of() - zwraca liczbę podniesioną do podanej potęgi
+/Metoda is_even() - zwracająca boolean czy podana liczba jest parzysta
+/Metoda check_battery() - metoda sprawdzająca poziom baterii
  4.  Utwórz pakiet pythonowy tests
  5.  W pakiecie utwórz plik pythonowy test_calculator.py
  6.  Przetestuj całą klasę Calculator z poznanymi na zajęciach

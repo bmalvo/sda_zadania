@@ -72,21 +72,44 @@ class Calculator:
         self.memory = result
         return result
 
+    def is_even(self, number):
+        self.check_battery()
+        self.battery -= 1
+        result = number%2 == 0
+        return bool(result)
+
+    def mean(self, direct):
+        self.check_battery()
+        self.battery -=1
+        direct = (input(""))
+        with direct as file:
+            for line in file:
+                list_of_mean = []
+                list_of_mean.append(line.mean())
+                print(list_of_mean)
 
 
 
 
-    # if __name__ == '__main__':
-    #     calc = Calculator()
-    #     print(f"stan baterii po utworzeniu obiektu: {calc.battery}")
-    #     calc.battery = 1
-    #     print(f"stan baterii po nadpisaniu wartości atrybutu battery {calc.battery}")
-    #     result = calc.add(2, 2)
-    #     print(f"Wynik dodawania: {result}")
-    #     print(f"Stan baterii po wykonaniu działania: {calc.battery}")
-    #     try:
-    #         calc.add(2, 2)
-    #     except NoBatteryError:
-    #         print("Włóż baterię!")
-    #         calc.battery = 100
-    #     print(calc.add(2, 2))
+
+
+if __name__ == '__main__':
+        calc = Calculator()
+        print(f"stan baterii po utworzeniu obiektu: {calc.battery}")
+        calc.battery = 1
+        print(f"stan baterii po nadpisaniu wartości atrybutu battery {calc.battery}")
+        result = calc.add(2, 2)
+        print(f"Wynik dodawania: {result}")
+        print(f"Stan baterii po wykonaniu działania: {calc.battery}")
+        try:
+            calc.add(2, 2)
+        except NoBatteryError:
+            print("Włóż baterię!")
+            calc.battery = 100
+        print(calc.add(2, 2))
+        try:
+            divide = calc.divide(3,0)
+        except DividedError:
+            print("Nie dziel cholero przez zero!")
+        print(calc.is_even(4))
+ 

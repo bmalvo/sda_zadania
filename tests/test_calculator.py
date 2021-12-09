@@ -82,4 +82,11 @@ def test_check_n_to_the_power_of(given_values,expected_result, calc):
     assert calc.memory == expected_result
     assert calc.battery == 99
 
-
+def test_check_is_even(calc):
+    assert calc.is_even(1) == False
+    assert calc.battery == 99
+    assert calc.is_even(2) == True
+    assert calc.battery == 98
+    assert calc.is_even(0) == True
+    assert calc.battery == 97
+    assert calc.is_even(-2) == True
