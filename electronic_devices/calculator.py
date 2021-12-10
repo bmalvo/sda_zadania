@@ -78,15 +78,18 @@ class Calculator:
         result = number%2 == 0
         return bool(result)
 
-    def mean(self, direct):
+    def mean(self, file):
         self.check_battery()
         self.battery -=1
-        direct = (input(""))
-        with direct as file:
-            for line in file:
-                list_of_mean = []
-                list_of_mean.append(line.mean())
-                print(list_of_mean)
+        self.file = open(file,"r")
+        with self.file as f:
+            list_main = []
+            for line in f:
+                lista = []
+                for i in line:
+                    if i.isdigit():
+                        lista.append(int(i))
+                        list_main.append(lista)
 
 
 
@@ -112,4 +115,4 @@ if __name__ == '__main__':
         except DividedError:
             print("Nie dziel cholero przez zero!")
         print(calc.is_even(4))
- 
+        calc.mean(input("plik: "))
