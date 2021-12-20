@@ -1,21 +1,21 @@
--1. Są dwie klasy: Account i Card
--2. Przy tworzeniu obiektu Account musimy podać takie parametry jak:
--* numer konta
--* imię
--* nazwisko
--* stan konta- domyślnie 0
--* wysokość debetu do którego możemy zejść- domyślnie 0
+x-1. Są dwie klasy: Account i Card
+x-2. Przy tworzeniu obiektu Account musimy podać takie parametry jak:
+x-* numer konta
+x-* imię
+x-* nazwisko
+x-* stan konta- domyślnie 0
+x-* wysokość debetu do którego możemy zejść- domyślnie 0
 
--3. Natomiast Card będzie miało takie własności jak:
--* konto - do którego jest "podpięta"
--* numer pin
+x-3. Natomiast Card będzie miało takie własności jak:
+x-* konto - do którego jest "podpięta"
+x-* numer pin
 
 4. Metody dla klasy Account:
 - odwołanie się do obiektu Account powinno zwracać numer konta
-- metoda Account.owner() powinna zwracać imię i nazwisko właściciela
-- metoda Account.balance() powinna zwracać aktualny stan konta
-- metoda Account.number() powinna zwracać numer konta
-- metoda Account.transfer() powinna zmieniać stan konta o podaną kwotę
+x- metoda Account.owner() powinna zwracać imię i nazwisko właściciela
+x- metoda Account.balance() powinna zwracać aktualny stan konta
+x- metoda Account.number() powinna zwracać numer konta
+x- metoda Account.transfer() powinna zmieniać stan konta o podaną kwotę
 - dodajcie metodę która będzie sprawdzać czy transfer() jest możliwy- jeżeli transfer spowodowałby obniżenie stanu konta
 poniżej możliwego debetu to wywołajmy własny warunek "NoFundsError"
 
