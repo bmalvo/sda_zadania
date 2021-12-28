@@ -1,7 +1,7 @@
 import pytest
 
 from electronic_devices import atm
-from electronic_devices.atm import Account, Card
+from electronic_devices.atm import Account, Card, NoFundsError
 
 @pytest.fixture()
 def acc():
@@ -31,6 +31,11 @@ def test_acc_owner_return_acc_number(given,expected,acc):
 def test_acc_owner_return_acc_number(acc):
     assert acc.number() == 123321
 
-@pytest.mark.parametrize("given, expected",[(100,1100),(-1000,0),(-1010,"You have no money!")])
+@pytest.mark.parametrize("given, expected",[(100,1100),(-1000,0),(-500, 500)])
 def test_acc_transfer_works(given,expected,acc):
-    assert acc.transfer(deposit=given) == expected
+    assert acc.transfer(operation=given) == expected
+
+@pytest.mark.parametrize('given, expected',[(-1100,NoFundsError)])
+def test_transfer_raise_NoFundsError(given, expected,acc):
+    with pytest.raises(expected):
+        acc.transfer(operation=given)

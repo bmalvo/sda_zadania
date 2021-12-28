@@ -16,8 +16,9 @@ x- metoda Account.owner() powinna zwracać imię i nazwisko właściciela
 x- metoda Account.balance() powinna zwracać aktualny stan konta
 x- metoda Account.number() powinna zwracać numer konta
 x- metoda Account.transfer() powinna zmieniać stan konta o podaną kwotę
-- dodajcie metodę która będzie sprawdzać czy transfer() jest możliwy- jeżeli transfer spowodowałby obniżenie stanu konta
-poniżej możliwego debetu to wywołajmy własny warunek "NoFundsError"
+x- dodajcie metodę która będzie sprawdzać czy transfer() jest możliwy-
+x  jeżeli transfer spowodowałby obniżenie stanu konta
+x  poniżej możliwego debetu to wywołajmy własny warunek "NoFundsError"
 
 5. Metody dla klasy Card:
 - odwołanie się do obiektu card powinno zwracać imię i nazwisko właściciela konta
