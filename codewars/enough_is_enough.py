@@ -8,12 +8,15 @@
 #
 # delete_nth([20, 37, 20, 21], 1)  # return [20,37,21]
 
-nth = ([1, 1, 1, 1], 2)
-
 def delete_nth(x,y):
-    if y == 1:
-        x = set(x)
-        return list(x)
+    new_nth = []
+    for i in x:
+        if new_nth.count(i) < y:
+            new_nth.append(i)
+    return new_nth
+
 
 print(delete_nth([20, 37, 20, 21], 1))
+
+
 
