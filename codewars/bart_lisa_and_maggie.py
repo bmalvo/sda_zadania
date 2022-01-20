@@ -1,4 +1,8 @@
+# Task:
+
 # Format a string of names like 'Bart, Lisa & Maggie'.
+
+# Examples:
 
 # namelist([ {'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'} ])
 # # returns 'Bart, Lisa & Maggie'
@@ -10,13 +14,14 @@
 # # returns 'Bart'
 
 
-names_4 = [{'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'}, {'name': 'Stefka'},{'name': 'Kulfon'}]
+names_4 = [{'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'}, {'name': 'Stefka'}, {'name': 'Kulfon'}]
 names_3 = [{'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'}]
 names_2 = [{'name': 'Bart'}, {'name': 'Lisa'}]
 names_1 = [{'name': 'Bart'}]
 names_0 = []
 
 
+# Solution:
 
 def namelist(names):
     names = [x["name"] for x in names]
@@ -35,8 +40,9 @@ def namelist(names):
         names_first = ", ".join(names_first)
         names_second = " ".join(names_second)
         names = names_first + " " + names_second
+        return names
     if len(names) > 3:
-        names.insert(-1,'&')
+        names.insert(-1, '&')
         names_first = names[:-2]
         names_second = names[-2:]
         names_first = ", ".join(names_first)
@@ -46,8 +52,14 @@ def namelist(names):
 
 
 print(namelist(names_4))
+print(namelist(names_3))
+print(namelist(names_2))
+print(namelist(names_1))
+print(namelist(names_0))
+
+
+# Best solution from site:
 
 def namelist1(names):
-  return ", ".join([name["name"] for name in names])[::-1].replace(",", "& ",1)[::-1]
+  return ", ".join([name["name"] for name in names])[::-1].replace(",", "& ", 1)[::-1]
 
-print(namelist1(names_4))
