@@ -1,6 +1,6 @@
 import pytest
 
-from tdd.fizz_buzz import fizz_buzz
+from electronic_devices.fizz_buzz import fizz_buzz
 
 @pytest.mark.parametrize("given_value, expected_result", [(1,"1"),(2,"2"),(4,"4"),(7,"7"),(8,"8")])
 def test_fizz_buzz_return_int_to_str(given_value, expected_result):
