@@ -11,18 +11,17 @@
 # -* numer pin - done
 #
 # 4. Metody dla klasy Account:
-# - odwołanie się do obiektu Account powinno zwracać numer konta
-# - metoda Account.owner() powinna zwracać imię i nazwisko właściciela
-# - metoda Account.balance() powinna zwracać aktualny stan konta
-# - metoda Account.number() powinna zwracać numer konta
-# - metoda Account.transfer() powinna zmieniać stan konta o podaną kwotę
+# - odwołanie się do obiektu Account powinno zwracać numer konta - done
+# - metoda Account.owner() powinna zwracać imię i nazwisko właściciela - done
+# - metoda Account.balance() powinna zwracać aktualny stan konta - done
+# - metoda Account.number() powinna zwracać numer konta - done
+# - metoda Account.transfer() powinna zmieniać stan konta o podaną kwotę - done
 # - dodajcie metodę która będzie sprawdzać czy transfer() jest możliwy- jeżeli transfer spowodowałby obniżenie
-# stanu konta poniżej możliwego debetu to wywołajmy własny warunek "NoFundsError"
+#   stanu konta poniżej możliwego debetu to wywołajmy własny warunek "NoFundsError" - done
 #
 # 5. Metody dla klasy Card:
-# - odwołanie się do obiektu card powinno zwracać imię i nazwisko właściciela konta
-# - metoda Card.check_pin powinna sprawdzić czy pin jest poprawny
-#
+# - odwołanie się do obiektu card powinno zwracać imię i nazwisko właściciela konta - done
+# - metoda Card.check_pin powinna sprawdzić czy pin jest poprawny - done
 # 6. Napiszcie testy jednostkowe do powstałych klas i ich metod, Sprawdźcie pokrycie kodu testami
 # za pomocą "pytest --cov". Doprowadźcie wynik do 100%
 #
@@ -38,28 +37,18 @@
 
 
 class Account:
-<<<<<<< HEAD
-
-    surname: object
-
     def __init__(self, account_number, name, surname, account_state=0, debt=0):
-=======
-    def __init__(self, account_number, name, surname, account_state = 0,debt =0):
->>>>>>> atm
         self.account_number = account_number
         self.name = name
         self.surname = surname
         self.account_state = account_state
         self.debt = debt
 
-<<<<<<< HEAD
     def __str__(self):
         return f"{self.account_number}".format(self=self)
-=======
->>>>>>> atm
 
     def owner(self):
-        return self.name, self.surname
+        return f'{self.name} {self.surname}'.format(self=self)
 
     def balance(self):
         return self.account_state
@@ -68,16 +57,15 @@ class Account:
         return self.account_number
 
     def transfer(self, operation):
-        if (self.account_state + operation) >= 0:
-            self.account_state += operation
-            return self.account_state
-        else:
-            raise NoFundsError
+        self.account_state += operation
+        if self.account_state < self.debt:
+            raise NoFundsError('Brak środków na koncie!')
+        return self.account_state
+
 
 
 
 class Card(Account):
-<<<<<<< HEAD
     def __init__(self, account_number, pin, name, surname):
         super().__init__(account_number, name, surname)
         self.pin = pin
@@ -87,44 +75,32 @@ class Card(Account):
 
     def check_pin(self):
         pin = self.pin
-        check = int(input('Please, enter the PIN: '))
-        if check != pin:
+        # check = input('Please, enter the PIN: ')
+        check = 8520
+        if int(check) != pin:
             print(pin)
             print('Wrong PIN')
         else:
             print('PIN accept')
 
 
+class NoFundsError(Exception):
+    pass
 
-s1 = Account(123321, "Bob", "Marley", 1000, 0)
+
+
+
+s1 = Account(123321, "Bob", "Marley", 1000, -1000)
 c1 = Card(123321, 8520, 'Bob', 'Marley')
 
-Account.owner(s1)
-print(s1)
-print(c1)
-c1.check_pin()
-=======
-    def __init__(self,acc_number, pin):
-        self.account_number = acc_number
-        self.pin = pin
-
-    def __str__(self):
-        return Account.owner(Card)
-
-class NoFundsError(Exception):
-    def __init__(self):
-        message = "Brak środków na koncie"
-        super().__init__(message)
-
-
-# s1 = Account(123321, "Bob", "Marley", 1000, 0)
-# s1.transfer(300)
-# s1.transfer(-200)
-# s1.transfer(-1300)
-# print(Account.balance(s1))
-#
 # print(Account.owner(s1))
+# print(Account.balance(s1))
+# print(Account.number(s1))
+# print(Account.transfer(s1, -4000))
 
-c1 = Card(123321,456654)
 print(c1)
->>>>>>> atm
+Card.check_pin(c1)
+
+
+
+
