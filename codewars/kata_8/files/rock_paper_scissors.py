@@ -7,13 +7,13 @@ Examples(Input1, Input2 --> Output):
 "paper", "paper" --> "Draw!" """
 
 
-def rps(p1, p2):
+def rps(pl_1, pl_2):
     """ Func output outcome of the game"""
     weapons = ['scissors', 'rock', 'paper']
-    if p1 == p2:
+    if pl_1 == pl_2:
         return 'Draw!'
-    if (p1 == weapons[0] and p2 == weapons[2]) or (p1 == weapons[1] and p2 == weapons[0]) \
-            or (p1 == weapons[2] and p2 == weapons[1]):
+    if (pl_1 == weapons[0] and pl_2 == weapons[2]) or (pl_1 == weapons[1] and pl_2 == weapons[0]) \
+            or (pl_1 == weapons[2] and pl_2 == weapons[1]):
         outcome = '1'
     else:
         outcome = '2'

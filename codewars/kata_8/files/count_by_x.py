@@ -5,11 +5,11 @@ Assume both the given number and the number of times to count will be positive n
 than 0. Return the results as an array (or list in Python, Haskell or Elixir)."""
 
 
-def count_by(x, n):
+def count_by(mul, timez):
     """
     Return a sequence of numbers counting by `x` `n` times.
     """
-    arr = [i*x for i in range(1, n+1)]
+    arr = [i*mul for i in range(1, timez+1)]
     return arr
 
 
