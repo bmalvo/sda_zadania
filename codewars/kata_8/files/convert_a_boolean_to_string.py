@@ -3,5 +3,6 @@
 Note: Only valid inputs will be given."""
 
 
-def boolean_to_string(b):
-    return 'True' if b else 'False'
+def boolean_to_string(boolean):
+    """Convert boolean to string"""
+    return 'True' if boolean else 'False'
