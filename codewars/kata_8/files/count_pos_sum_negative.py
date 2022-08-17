@@ -10,12 +10,12 @@ For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should r
 
 
 def count_positives_sum_negatives(arr):
+    """Like in description above"""
     result = []
     result.append(sum(x > 0 for x in arr))
-    result.append(lambda arr: 0+x for x in arr)
+    second_res = 0
+    for i in arr:
+        if i < 0:
+            second_res += i
+    result.append(second_res)
     return result
-
-
-a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
-
-print(count_positives_sum_negatives(a))
