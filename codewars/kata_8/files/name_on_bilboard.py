@@ -9,4 +9,8 @@ If your name would be Jeong-Ho Aristotelis, ad would cost £600.
 
 
 def billboard(name, price=30):
-    return -1
+    """Give total cost of bilboard"""
+    cost = 0
+    for _ in name[::]:
+        cost += price
+    return cost
