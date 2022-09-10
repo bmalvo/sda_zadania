@@ -5,17 +5,15 @@ if type of variable is matching type. Return true if types match or false if not
 Examples:
 42, "int"    --> True
 "42", "int"  --> False"""
+from collections import Counter
+from pandas._libs.hashtable import Vector
+from pandas.compat.numpy import function
+from pandas import DataFrame
+from re import A
+
+B = type(bytes)
+NoneType = type(None)
 
 
-def type_validation(variable, _type):
-    try:
-        res = variable == _type
-    except TypeError:
-        res = False
-    return res
-    # your code here
-    pass
-
-
-print(type_validation('2', int))
-print(2 == int)
+def type_validation(vaariable, _type):
+    return isinstance(vaariable, (eval(_type)))
