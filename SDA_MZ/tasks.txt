@@ -1,0 +1,27 @@
+Threading – programowanie równoległe i współbieżne.
+1. Przygotuj aplikację uruchamiającą 1 wątek wyświetlający losową liczbę z zakresu
+10-100. Wątek powinien wyświetlić liczbę 5 razy w odstępie 1 sekundy. Przygotuj
+wątek poprzez dziedziczenie z klasy Thread.
+2. Przygotuj poprzednie zadanie poprzez wykorzystanie gotowej klasy Thread.
+3. Wykorzystaj pulę wątków (5 wątków). Użyj ThreadPoolExecutor. Niech każdy z
+wątków po uruchomieniu losuje czas uśpienia z zakresu 1-10 sekund i usypia się.
+Po wybudzeniu każdy wątek powinien wyświetlić aktualny czas.
+4. Przygotuj aplikację pobierającą i zapisującą imię od użytkownika w zmiennej
+lokalnej. Przygotuj wątek sprawdzający co sekundę czy wprowadzone imię uległo
+zmianie. Jeśli imię uległo zmianie wątek powinien wyświetlić komunikat. “Stare imię:
+Jan, nowe imię: Małgorzata”
+5. Przygotuj klasę Numbers posiadającą listę typu Integer. Przygotuj 2 wątki. Wątek o
+nazwie ThreadA:
+- niech przyjmuje w konstruktorze referencje do kolejki oraz obiektu typu Lock
+- niech losuje co sekundę 2 liczby całkowite z zakresu <0,1000)
+- tworzy instancję klasy Numbers i uzupełnia w niej listę wylosowanymi liczbami
+- po każdorazowym wylosowaniu liczb i utworzeniu obiektu klasy Numbers dodaje ją do
+kolejki (do której posiada referencję).
+- Liczby powinny być losowanie co sekundę. Po wylosowaniu liczb wątek wyświetla
+informacje: “Wylosowano liczby x i y”, gdzie za x oraz y należy wstawić wylosowane
+wartości.
+Drugi wątek ThreadB:
+- pobiera obiekt typu Numbers z kolejki a następnie z tablicy obiektu zmienn x i y oraz
+sumuje te liczby ( znajdujące się na liście obiektu Numbers)
+- Wyświetla komunikat “Suma liczb x i y wynosi z”, gdzie x i y to wylosowane wartości a z
+to obliczona suma.
