@@ -54,3 +54,15 @@ def search_validator(text):
         res = 'There is no match'
     return res
 
+# Task 5
+
+
+def data_validator(date):
+    pattern = r'[0-9]{2}\.[0-9]{2}\.[0-9]{4}r'
+    if re.fullmatch(pattern, date):
+        res = 'Valid date'
+    else:
+        res = 'Invalid date'
+    return res
+
+
