@@ -76,3 +76,14 @@ def serial_validator(serial):
         res = 'Invalid serial'
     return res
 
+# Task 7
+
+
+def serial_number_validator(serial_number):
+    pattern = '[A-Z0-9&]{5}-[A-Z0-9&]{5}-[A-Z0-9&]{5}-[A-Z0-9&]{5}-[A-Z0-9&]{5}'
+    if re.fullmatch(pattern, serial_number):
+        res = 'Valid serial number'
+    else:
+        res = 'Invalid serial number'
+    return res
+
