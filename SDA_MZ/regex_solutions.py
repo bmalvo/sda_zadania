@@ -1,5 +1,6 @@
 """Here are answers to regex_task.txt"""
 
+import re
 # task 1
 
 
@@ -19,3 +20,27 @@
 #
 #
 # print(checking_input())
+
+# Task 2
+
+def code_validator(post_code):
+    """checking if a post code is valid"""
+    pattern = '[0-9]{2}-[0-9]{3}'
+    if re.fullmatch(pattern, post_code):
+        res = 'This is a valid code. Thanks!'
+    else:
+        res = 'This code is invalid.'
+    return res
+
+# Task 3
+
+
+def login_validator(your_login):
+    pattern = '[a-zA-Z0-9]{8,16}'
+    if re.fullmatch(pattern, your_login):
+        res = 'This is a valid code. Thanks!'
+    else:
+        res = 'This code is invalid.'
+    return res
+
+# Task 4
