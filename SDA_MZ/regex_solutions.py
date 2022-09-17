@@ -65,4 +65,14 @@ def data_validator(date):
         res = 'Invalid date'
     return res
 
+# Task 6
+
+
+def serial_validator(serial):
+    pattern = '[A-Z]{3}[0-9]{5}[a-z][A-Z]'
+    if re.fullmatch(pattern, serial):
+        res = 'Valid serial'
+    else:
+        res = 'Invalid serial'
+    return res
 
