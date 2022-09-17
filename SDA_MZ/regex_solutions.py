@@ -87,3 +87,15 @@ def serial_number_validator(serial_number):
         res = 'Invalid serial number'
     return res
 
+# Task 8
+
+
+def invoice_validator(invoice):
+    pattern = '(FV)/1[0-9]{3}/(0[1-9]|1[012])/[0-9]{4}'
+    if re.fullmatch(pattern, invoice):
+        res = 'Valid invoice'
+    else:
+        res = 'Invalid invoice'
+    return res
+
+
