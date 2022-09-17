@@ -44,3 +44,13 @@ def login_validator(your_login):
     return res
 
 # Task 4
+
+
+def search_validator(text):
+    pattern = 'ala'
+    if re.search(pattern, text):
+        res = 'Find one match'
+    else:
+        res = 'There is no match'
+    return res
+
