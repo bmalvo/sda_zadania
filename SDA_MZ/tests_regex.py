@@ -1,6 +1,7 @@
 import pytest
 from SDA_MZ.regex_solutions import code_validator, login_validator, search_validator, \
-                                   data_validator, serial_validator, serial_number_validator
+                                   data_validator, serial_validator, serial_number_validator, \
+                                   invoice_validator
 
 
 def test_code_validator_1():
@@ -59,3 +60,12 @@ def test_serial_number_validator_valid():
 
 def test_serial_number_validator_invalid():
     assert serial_number_validator('CFG&Y-TYH67-GH56T-UIO99_RY4RT') == 'Invalid serial number'
+
+
+def test_invoice_validator_valid():
+    assert invoice_validator('FV/1024/02/2018') == 'Valid invoice'
+
+
+def test_invoice_validator_invalid():
+    assert invoice_validator('FV-1024-02-2018') == 'Invalid invoice'
+    
