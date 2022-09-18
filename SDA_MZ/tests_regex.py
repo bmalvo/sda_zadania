@@ -1,5 +1,6 @@
 import pytest
-from SDA_MZ.regex_solutions import code_validator, login_validator, search_validator
+from SDA_MZ.regex_solutions import code_validator, login_validator, search_validator, \
+                                   data_validator
 
 
 def test_code_validator_1():
@@ -34,4 +35,12 @@ def test_search_validator_find():
 
 def test_search_validator_no_mach():
     assert search_validator('tiger') == 'There is no match'
+
+
+def test_data_validator_valid():
+    assert data_validator('10.02.2018r') == 'Valid date'
+
+
+def test_data_validator_invalid():
+    assert data_validator('10,03,2018r') == 'Invalid date'
     
