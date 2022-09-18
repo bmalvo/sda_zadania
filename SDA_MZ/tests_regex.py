@@ -1,6 +1,6 @@
 import pytest
 from SDA_MZ.regex_solutions import code_validator, login_validator, search_validator, \
-                                   data_validator, serial_validator
+                                   data_validator, serial_validator, serial_number_validator
 
 
 def test_code_validator_1():
@@ -51,3 +51,11 @@ def test_serial_validator_valid():
 
 def test_serial_validator_invalid():
     assert serial_validator('VSDe3281fa') == 'Invalid serial'
+
+
+def test_serial_number_validator_valid():
+    assert serial_number_validator('CFG&Y-TYH67-GH56T-UIO99-RY4RT') == 'Valid serial number'
+
+
+def test_serial_number_validator_invalid():
+    assert serial_number_validator('CFG&Y-TYH67-GH56T-UIO99_RY4RT') == 'Invalid serial number'
