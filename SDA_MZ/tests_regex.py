@@ -1,6 +1,6 @@
 import pytest
 from SDA_MZ.regex_solutions import code_validator, login_validator, search_validator, \
-                                   data_validator
+                                   data_validator, serial_validator
 
 
 def test_code_validator_1():
@@ -43,4 +43,11 @@ def test_data_validator_valid():
 
 def test_data_validator_invalid():
     assert data_validator('10,03,2018r') == 'Invalid date'
-    
+
+
+def test_serial_validator_valid():
+    assert serial_validator('VSD43281fA') == 'Valid serial'
+
+
+def test_serial_validator_invalid():
+    assert serial_validator('VSDe3281fa') == 'Invalid serial'
