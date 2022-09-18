@@ -1,5 +1,5 @@
 import pytest
-from SDA_MZ.regex_solutions import code_validator, login_validator
+from SDA_MZ.regex_solutions import code_validator, login_validator, search_validator
 
 
 def test_code_validator_1():
@@ -26,4 +26,12 @@ def test_login_validation_valid():
 
 def test_login_validation_invalid():
     assert login_validator('short') == 'This login is invalid.'
+
+
+def test_search_validator_find():
+    assert search_validator('koala') == 'Find one match'
+
+
+def test_search_validator_no_mach():
+    assert search_validator('tiger') == 'There is no match'
     
