@@ -98,4 +98,36 @@ def invoice_validator(invoice):
         res = 'Invalid invoice'
     return res
 
+# Task 9
 
+
+def regex_ex9():
+    text = """ Drogi Marszałku, Wysoka Izbo. PKB rośnie. Z pełną odpowiedzialnością mogę
+    stwierdzić iż realizacja określonych zadań stanowionych przez organizację.
+    Dalszy rozwój jest ważne zadanie w większym stopniu tworzenie odpowiednich
+    warunków aktywizacji. Często niezauważanym szczegółem jest to, że zakres
+    i rozwijanie struktur pociąga za najważniejszy punkt naszych działań
+    obierzemy praktykę, nie zaś teorię, okazuje się jasne
+    """
+    regex = ' '
+    result = re.split(regex, text)
+    print(result)
+    filtered_result = [element for element in result if element]
+    print(filtered_result)
+    print(f'Ilość słów: {len(filtered_result)}')
+    print(f'Ilosc znakow: {len(text)}')
+    sum_of_chars = 0
+    longest_word_size = 0
+    shortest_word_size = 0
+    if filtered_result:
+        shortest_word_size = len(filtered_result[0])
+    for word in filtered_result:
+        length_word = len(word)
+        if length_word > longest_word_size:
+            longest_word_size = length_word
+        if shortest_word_size > length_word:
+            shortest_word_size = length_word
+        sum_of_chars += length_word
+    print(f'Srednia dlugosc slowa: {float(sum_of_chars/len(filtered_result))}')
+    print(f'Najdluzsze slowo: {longest_word_size}')
+    print(f'Najkrotsze slowo: {shortest_word_size}')
