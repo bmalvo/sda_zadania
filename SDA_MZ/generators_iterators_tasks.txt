@@ -1,0 +1,17 @@
+Generatory i iteratory.
+1. Napisz słownik (dict) z dowolnymi wartościami, klucz i wartość. Napisz pętlę w której
+przeiterujesz się przez klucze, następnie napisz pętlę w której przeiterujesz się przez
+wartości słownika.
+2. Napisz funkcję przyjmuję liczbę n i która zwraca listę kolejnych liczb o rozmiarze n, a
+następnie jej wynik użyj w metodzie sum() dostarczonej w standardzie pythona.
+3. Napisz klasę która będzie umożliwiała iterację. W konstruktorze przyjmuje liczbę n
+która posłuży jako warunek zatrzymania iteratora. Pamiętaj, że klasa umozliwiająca
+iterację musi mieć metody __iter__ i __next__ oraz rzucać wyjątek StopIteration.
+Wynik utworzonego obiektu tej klasy użyj przekazując do metody sum(). (Klasa ta to
+odpowiednik metody z zadania drugiego.)
+4. Utwórz plik który wypełnisz przykładowym długim tekstem (np. wielokrotnie
+powtórzony lorem ipsum). Napisz funkcję która leniwie będzie czytać plik po 1024
+bajty. Podpowiedź: Utwórz generator ze słowem kluczowym yield.
+5. Napisz funkcję która otwiera plik i czyta go linia po linii. (Podpowiedź: funkcja open()
+wykorzystana z pętlą for pozwala na zwrócenie generatora – nie zaczytuje całego
+pliku na jeden raz, a każdą linię z osobna).
