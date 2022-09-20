@@ -25,6 +25,8 @@ def numbers(n):
         lst_numb.append(i)
     return sum(lst_numb)
 
+# task 3
+
 
 class IteratorNumbers:
 
@@ -43,4 +45,19 @@ class IteratorNumbers:
 
 itek = IteratorNumbers()
 print(sum(itek))  # -> 55
+
+# task 4
+
+
+def reader(file, chunk=46):
+    while True:
+        data = file.read(chunk)
+        if not data:
+            break
+        yield data
+
+
+read_file = open('inwokacja', encoding='utf-8')
+print(next(reader(read_file)))
+print(next(reader(read_file)))
 
