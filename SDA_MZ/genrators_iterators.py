@@ -61,3 +61,11 @@ read_file = open('inwokacja', encoding='utf-8')
 print(next(reader(read_file)))
 print(next(reader(read_file)))
 
+
+# task 5
+
+
+def line_reader():
+    for line in open('inwokacja', encoding='utf-8'):
+        print(line, end='\n')
+
