@@ -1,0 +1,18 @@
+Lambda expressions – Wyrażenia Lambda:
+1. Przygotuj listę z 5 różnymi imionami. Posortuj tablicę według
+a. długości rosnąco
+b. długości malejąco
+c. pierwszej litery imienia rosnąco
+2. Przygotuj klasę BankAccount posiadającą pola name and balance. Utwórz 5 instancji
+klasy BankAccount ze stanem konta odpowiednio 1000, 4000, 5000,7500 i 10000
+złotych. Dodaj je do listy. Korzystając z funkcji filter znajdź wszystkie konta które
+mają zgromadzonych środków więcej niż 4500zł.
+3. Wykorzystując przygotowaną listę z poprzedniego zadania za pomocą funkcji
+max znajdź konto, które ma najwięcej zgromadzonych środków.
+4. Wykorzystując listę składaną wygeneruj 10 losowych liczb z zakresu <0,100),
+następnie wymnóż każdą wylosowaną liczbę za pomocą map przez 2 i korzystając z
+for wyświetl każdą wylosowaną i wymnożoną liczbę.
+5. Utwórz listę typu int. Wylosuj 20 wartości z przedziału <100,200> i wyświetl
+tablicę. Wykorzystując sorted lub list.sort posortuj tablicę z wygenerowanymi
+wartościami rosnąco, a następnie wyświetl tablicę, posortuj tablicę malejąco, a
+następnie ją wyświetl.
