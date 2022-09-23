@@ -43,3 +43,10 @@ account_list = [aron, bill, cecylia, david, egon]
 big_account = filter(lambda x: x.balance > 4500, account_list)
 
 print([x.name for x in big_account])
+
+
+# task 3
+
+def biggest_cash():
+    biggest_account = max(account_list, key=lambda x: x.balance)
+    return biggest_account.name
