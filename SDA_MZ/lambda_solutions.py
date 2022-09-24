@@ -2,7 +2,7 @@
 
 
 # task 1
-
+import random
 
 nameList = ['John', 'Daemon', 'Elevryn', 'Macaray', 'Zaerniitzh']
 
@@ -50,3 +50,11 @@ print([x.name for x in big_account])
 def biggest_cash():
     biggest_account = max(account_list, key=lambda x: x.balance)
     return biggest_account.name
+
+
+# task 4
+
+def multiplied_by_two():
+    numbers = [x for x in random.randrange(1,100)]
+    ten_numbers = random.randint(numbers)
+    print(ten_numbers)
