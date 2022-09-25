@@ -1,0 +1,7 @@
+Content Manager – Menedżer kontekstu.
+1. Utwórz funkcję otwierającą plik do czytania lub zapisu, która będzie zawierała
+możliwość użycia jej wraz z operatorem „with” (użyj yield)
+2. Utwórz klasę otwierającą plik do czytania lub zapisu, która będzie zawierała
+możliwość użycia jej wraz z operatorem „with”. (uzyj metod __enter__ i __exit__)
+3. Dodaj do klasy z zadania drugiego print drukujący „opening file...” w metodzie
+__enter__ oraz „closing file...” w metodzie __exit__
