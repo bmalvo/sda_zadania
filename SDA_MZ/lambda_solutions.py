@@ -64,3 +64,17 @@ def multi_all_list_by_two():
     map_numbers = map(multi_by_two, numbers)
     for _ in map_numbers:
         print(_, end=' - ')
+
+
+# task 5
+
+from array import array
+
+
+def exercise_with_array():
+    arr = array('i', [random.randint(100, 200) for _ in range(20)])
+    print(arr)
+    arr_sorted = sorted(arr)
+    print(arr_sorted)
+    arr_sorted_desc = sorted(arr, reverse=True)
+    print(arr_sorted_desc)
