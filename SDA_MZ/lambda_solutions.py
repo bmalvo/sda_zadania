@@ -54,7 +54,13 @@ def biggest_cash():
 
 # task 4
 
-def multiplied_by_two():
-    numbers = [x for x in random.randrange(1,100)]
-    ten_numbers = random.randint(numbers)
-    print(ten_numbers)
+def multi_by_two(x):
+    return x * 2
+
+
+def multi_all_list_by_two():
+    numbers = [random.randint(0, 100) for _ in range(10)]
+    print(numbers)
+    map_numbers = map(multi_by_two, numbers)
+    for _ in map_numbers:
+        print(_, end=' - ')
