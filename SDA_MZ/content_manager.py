@@ -27,10 +27,12 @@ class ReadFile:
         self.__source = path
 
     def __enter__(self):
+        print('opening file...')  # task 3
         self.__file_descriptor = open(self.source, 'a')
         return self.__file_descriptor
 
     def __exit__(self, *args):
+        print('closing file...')  # task 3
         self.__file_descriptor.close()
 
 
