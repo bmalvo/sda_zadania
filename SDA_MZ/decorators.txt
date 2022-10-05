@@ -1,0 +1,21 @@
+Decorators – Dekoratory
+1. Utwórz funkcję drukującą „hello”, którą „opakujesz” dekoratorem i przed wywołaniem
+tej funkcji oraz po jej wywołaniu wydrukujesz odpowiednio wiadomości przed i po.
+2. Utwórz funkcję otwierającą plik do czytania, którą „opakujesz” dekoratorem i przed
+wywołaniem tej funkcji sprawdzisz czy plik istnieje. Jeśli nie wydrukujesz tą
+informację i utworzysz pusty plik.
+3. Napisz funkcję rzucającą wyjątek IOError, opakuj tą funkcję dekoratorem który
+przechwyci wyjątek i wydrukuje informację.
+4. Napisz funkcję czytającą plik który nie istnieje. Gdy program przestanie działać
+opakuj tą funkcję dekoratorem z zadania 3ego.
+„Ciekawostka”:
+   do zapamiętania:
+   - Dekoratory to oferowana przez Python składnia pozwalająca jednej funkcji na mody-
+     fikację innej w trakcie działania programu.
+   - Użycie dekoratorów może prowadzić do dziwnego zachowania narzędzi przeznaczinych
+     do introspekcji, na przykład debuggerów.
+   - Aby uniknąć problemów podczas definiowania własnych dekoratorów, używaj fukcji
+     wraps() z wbudowanego modułu functools
+
+Źródło: „Efektywny Python. 59 sposobów na lepszy kod”
+5. Stwórz dekorator z zadania 3go z użyciem funtools.
