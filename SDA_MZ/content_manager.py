@@ -8,7 +8,7 @@ def reader(file):
     yield read.read()
 
 
-print(next(reader(r'inwokacja')))
+print(next(reader(r'inwokacja.txt')))
 
 # task 2:
 

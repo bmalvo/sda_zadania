@@ -57,7 +57,7 @@ def reader(file, chunk=46):
         yield data
 
 
-read_file = open('inwokacja', encoding='utf-8')
+read_file = open('inwokacja.txt', encoding='utf-8')
 print(next(reader(read_file)))
 print(next(reader(read_file)))
 
@@ -66,6 +66,6 @@ print(next(reader(read_file)))
 
 
 def line_reader():
-    for line in open('inwokacja', encoding='utf-8'):
+    for line in open('inwokacja.txt', encoding='utf-8'):
         print(line, end='\n')
 
