@@ -39,3 +39,23 @@ def if_exist(func):
 def reader(path):
     with open(path, 'r', encoding='utf-8') as f:
         return f.read()
+
+# task 3
+
+
+def catch_error(func):
+    def wrapper(*args):
+        try:
+            func(*args)
+        except FileNotFoundError:
+            return f'Wrong name or path of file.'
+    return wrapper
+
+
+@catch_error
+def open_file(path):
+    with open(path, 'r', encoding='utf-8') as f:
+        return f.read()
+
+
+# print(open_file('document.txt'))
