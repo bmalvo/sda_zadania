@@ -68,3 +68,17 @@ def open_file2(path):
     with open(path, 'r', encoding='utf-8') as f:
         return f.read()
 
+# task 5
+
+
+from functools import wraps
+
+
+def catch_error2(func):
+    @wraps(func)
+    def wrapper(*args):
+        try:
+            func(*args)
+        except FileNotFoundError:
+            return f'Wrong name or path of file.'
+    return wrapper
