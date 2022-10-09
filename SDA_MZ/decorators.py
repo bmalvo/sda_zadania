@@ -59,3 +59,12 @@ def open_file(path):
 
 
 # print(open_file('document.txt'))
+
+
+# task 4
+
+@catch_error
+def open_file2(path):
+    with open(path, 'r', encoding='utf-8') as f:
+        return f.read()
+
