@@ -3,11 +3,11 @@ accumulate with repeated computation, and numbers expected to be equal often dif
 
 As a result, it is common advice to not use an exact equality comparison (==) with floats.
 
->>> a, b, c = 1e-9, 1e-9, 3.33e7
->>> (a + b) + c == a + (b + c)
+#  a, b, c = 1e-9, 1e-9, 3.33e7
+# (a + b) + c == a + (b + c)
 False
 
->>> 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 == 1.0
+#  0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 == 1.0
 False
 The solution is to check if a computed value is close to an expected value, without requiring them
 to be exactly equal. It seems very easy, but many katas test float results the wrong way.
@@ -25,7 +25,8 @@ The function is bugged and sometimes returns wrong results.
 Your task is to correct the bug."""
 
 
-def approx_equals(a, b):
-    a = round(a, 3)
-    b = round(b, 3)
-    return a == b
+def approx_equals(num1, num2):
+    """Compute if the numbers are enough close to each other"""
+    precision = round((max(num1, num2) - min(num1, num2)), 5)
+    print(precision)
+    return precision < 0.00101
