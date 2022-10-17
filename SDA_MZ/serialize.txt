@@ -1,0 +1,20 @@
+Serializacja
+1. Napisz listę dowolnych obiektów, a następnie użyj modułu pickle i serializuj, je do
+pliku.
+2. Odzyskaj serializowane do pliku dane z zadania 1.
+3. Utwórz listę tupli z danymi o użytkownikach (imi,nazwisko,pesel). Zapisz uzyskane
+dane jako plik csv.
+4. Wczytaj i wyświetl dane z zadania drugiego.
+5. Przygotuj listę obiektów w formacie json a następnie zapisz je do pliku.
+6. Odczytaj i wyświetl dane z pliku.
+7. Utwórz klasę Human, niech posiada atrybuty wiek, imię oraz nazwisko, ustawiane
+poprzez konstruktor.
+8. Nadpisz metodę __str__ wyświetlającą dane o użytkowniku.
+9. Napisz w klasie Human metodę convert_to_dict, której użyjesz do serializacji.
+Wykorzystaj domyślną metodę __dict__.
+10. Zamień obiekty klasy Human na obiekty w formacie json i następnie zapisz je do
+pliku.
+11. Napisz w klasie Human metodę convert_from_dict, której użyjesz do deserializacji.
+Dla bezpieczeństwa wykorzystaj metodę get słownika z wartością domyślną np. ‘’.
+12. Odczytaj obiekty z pliku, zamień je na klasę Human i wyświetl wszystkie obiekty typu
+Human z pliku w pętli print(human).
