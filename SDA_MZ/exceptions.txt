@@ -1,0 +1,26 @@
+Exceptions – Wyjątki
+1. Utwórz listę przechowującą liczby całkowite.
+a. Dodaj 5 liczb do listy.
+b. Pobierz 6 element z listy.
+c. Uruchom aplikację i sprawdź co pokaże Pycharm.
+d. Zabezpiecz kod za pomocą klauzuli try expect, wyjątkiem ogólnym, a
+następnie precyzyjnym. Ostatecznie dwoma wyjątkami.
+e. W przypadku wystąpienia błędu wyświetl stosowny komunikat.
+2. Utwórz funkcję przyjmującą zmienną typu string, a następnie przypisz do niej imię.
+Następnie sprawdź jej rozmiar, dla pustego string rzuć wyjątek np. ValueError. W
+innym przypadku wydrukuj
+3. Napisz funkcję dzielącą dwie liczby, pamiętaj aby złapać wyjątek łapania przez zero,
+wypisz informacje o wyjątku i zwróć zero.
+4. Stwórz funkcję przyjmującą słownik (dict). Załóż że słownika ma klucz o nazwie
+‘items’, a wartością jest lista sprzętu elektronicznego (lista str). Jeśli lista istnieje
+wydrukuj ją. Zabezpiecz się na sytuację w której nie będzie klucza którego metoda
+oczekuje (try - except). Jak inaczej się zabezpieczyć na ten wyjątek z użyciem
+zdolności typu dict?
+5. Do klasy OrderItem dodaj przypadek rzucania własnego wyjątku w metodzie
+is_correct. Wyjątek to OrderItemError który dziedziczy z ValueError.
+6. Napisz funkcję bez ciała, zabezpiecz jej użycie wyjątkiem NotImplementedError.
+7. Stwórz funkcję otwierającą następujący plik. ‘c:/not_exist/file’. Pamiętaj o złapaniu
+odpowiedniego wyjątku oraz zamykaniu uchwytu do pliku. Jak inaczej zabezpieczyć
+się na tą sytuację ?
+8. Przydatny artykuł o wyjątkach 
+https://realpython.com/python-exceptions/
