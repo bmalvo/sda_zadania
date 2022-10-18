@@ -10,3 +10,13 @@ def pickling_data():
         pickle.dump(list_of_objects, f)
 
 
+# task 2
+
+def de_pickling_data():
+    with open('pickle_file', 'rb') as f:
+        objects_list = pickle.load(f)
+        for line in objects_list:
+            print(line)
+
+
+de_pickling_data()
