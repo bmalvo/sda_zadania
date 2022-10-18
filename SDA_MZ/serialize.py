@@ -4,7 +4,9 @@ import pickle
 
 list_of_objects = ['stefka', 'brydzia', 3, {'cat': 'stefka', 'turtle': 'Leon'}]
 
-with open('pickle_file', 'ab') as f:
-    pickle.dump(list_of_objects, f)
 
-    
+def pickling_data():
+    with open('pickle_file', 'ab') as f:
+        pickle.dump(list_of_objects, f)
+
+
