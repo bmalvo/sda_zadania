@@ -35,3 +35,14 @@ def write_data_csv():
 
 
 # write_data_csv()
+
+# task 4
+
+def reader_data_csv():
+    with open('users_data.txt', 'r') as users:
+        data_reader = csv.reader(users)
+        for row in data_reader:
+            print(row)
+            
+
+reader_data_csv()
