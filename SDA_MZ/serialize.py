@@ -1,4 +1,5 @@
 import pickle
+import csv
 
 # task 1
 
@@ -19,4 +20,18 @@ def de_pickling_data():
             print(line)
 
 
-de_pickling_data()
+# de_pickling_data()
+
+# task 3
+
+tuple_list = [('John', 'Wick', 45342356980), ('Viseris', 'Targarien', 43546887901),
+              ('Hubba', 'Bubba', 31234567890)]
+
+
+def write_data_csv():
+    with open('users_data.txt', 'w') as users:
+        data_writer = csv.writer(users)
+        data_writer.writerow(tuple_list)
+
+
+# write_data_csv()
