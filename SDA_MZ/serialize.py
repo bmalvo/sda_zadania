@@ -1,5 +1,6 @@
 import pickle
 import csv
+import json
 
 # task 1
 
@@ -43,6 +44,23 @@ def reader_data_csv():
         data_reader = csv.reader(users)
         for row in data_reader:
             print(row)
-            
 
-reader_data_csv()
+
+# reader_data_csv()
+
+# task 5
+
+objects = {
+    'cat_1': 'stefka',
+    'cat_2': 'brydzia',
+    'turtle': 'leon'
+}
+
+
+def json_writer():
+    with open('animals.json', 'w') as f:
+        json_objects = json.dumps(objects, indent=4)
+        f.write(json_objects)
+
+
+# json_writer()
