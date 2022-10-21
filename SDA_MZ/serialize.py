@@ -64,3 +64,13 @@ def json_writer():
 
 
 # json_writer()
+
+# task 6
+
+def json_reader():
+    with open('animals.json', 'r') as f:
+        json_objects = json.load(f)
+        print(json_objects)
+
+
+json_reader()
