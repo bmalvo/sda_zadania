@@ -75,7 +75,7 @@ def json_reader():
 
 # json_reader()
 
-# task 7, 8
+# task 7, 8, 9
 
 
 class Human:
@@ -87,4 +87,13 @@ class Human:
     def __str__(self):
         return f'{self.name} {self.surname} lat: {self.age}'
 
+    def convert_to_dict(self):
+        return self.__dict__
 
+
+# for testing purposes -->
+# piotrek = Human(name="Piotr", surname='Kornacki', age=63)
+#
+# print(piotrek)
+# print(piotrek.convert_to_dict())
+# print(vars(piotrek))
