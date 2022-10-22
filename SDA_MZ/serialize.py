@@ -73,4 +73,14 @@ def json_reader():
         print(json_objects)
 
 
-json_reader()
+# json_reader()
+
+# task 7
+
+
+class Human:
+    def __init__(self, age, name, surname):
+        self.age = age
+        self.name = name
+        self.surname = surname
+        
