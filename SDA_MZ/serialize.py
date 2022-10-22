@@ -97,14 +97,19 @@ class Human:
     def convert_from_dict():
         with open('human-file.json', 'r') as f:
             json_objects = json.load(f)
-            person = Human(json_objects.get('age'), json_objects.get('name'),
-                           json_objects.get('surname'))
-        return person.__str__()
+            objects_list = []
+            for person in json_objects:
+                obj = Human(person.get('age'), person.get('name'), person.get('surname'))
+                objects_list.append(obj.__str__())
+        for obj in objects_list:
+            print(obj)
 
 
 # piotrek = Human(name="Piotr", surname='Kornacki', age=63)
 # piotrek.convert_to_dict()
 print(Human.convert_from_dict())
+
+
 
 
 # for testing purposes -->
