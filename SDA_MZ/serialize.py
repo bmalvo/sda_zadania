@@ -75,7 +75,7 @@ def json_reader():
 
 # json_reader()
 
-# task 7, 8, 9
+# task 7, 8, 9, 10
 
 
 class Human:
@@ -92,8 +92,17 @@ class Human:
 
 
 # for testing purposes -->
-# piotrek = Human(name="Piotr", surname='Kornacki', age=63)
+piotrek = Human(name="Piotr", surname='Kornacki', age=63)
 #
 # print(piotrek)
 # print(piotrek.convert_to_dict())
 # print(vars(piotrek))
+
+
+def from_human_to_file():
+    with open('human-file.json', 'a') as f:
+        json_objects = json.dumps(piotrek.convert_to_dict(), indent=4)
+        f.write(json_objects)
+
+
+# from_human_to_file()
