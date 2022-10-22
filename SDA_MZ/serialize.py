@@ -93,12 +93,18 @@ class Human:
             f.write(json_objects)
         return 'Done!'
 
-    def convert_from_dict(self):
-        pass
+    @staticmethod
+    def convert_from_dict():
+        with open('human-file.json', 'r') as f:
+            json_objects = json.load(f)
+            person = Human(json_objects.get('age'), json_objects.get('name'),
+                           json_objects.get('surname'))
+        return person.__str__()
 
 
-piotrek = Human(name="Piotr", surname='Kornacki', age=63)
-piotrek.convert_to_dict()
+# piotrek = Human(name="Piotr", surname='Kornacki', age=63)
+# piotrek.convert_to_dict()
+print(Human.convert_from_dict())
 
 
 # for testing purposes -->
