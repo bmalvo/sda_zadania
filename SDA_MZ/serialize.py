@@ -75,7 +75,7 @@ def json_reader():
 
 # json_reader()
 
-# task 7, 8, 9
+# task 7, 8, 9, 10, 11
 
 
 class Human:
@@ -88,12 +88,21 @@ class Human:
         return f'{self.name} {self.surname} lat: {self.age}'
 
     def convert_to_dict(self):
-        return self.__dict__
+        with open('human-file.json', 'a') as f:
+            json_objects = json.dumps(self.__dict__, indent=4)
+            f.write(json_objects)
+        return 'Done!'
+
+    def convert_from_dict(self):
+        pass
+
+
+piotrek = Human(name="Piotr", surname='Kornacki', age=63)
+piotrek.convert_to_dict()
 
 
 # for testing purposes -->
-# piotrek = Human(name="Piotr", surname='Kornacki', age=63)
-#
 # print(piotrek)
 # print(piotrek.convert_to_dict())
 # print(vars(piotrek))
+
