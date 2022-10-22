@@ -108,7 +108,12 @@ print(Human.convert_from_dict())
 
 
 # for testing purposes -->
+
+# piotrek = Human(name="Piotr", surname='Kornacki', age=63)
+#
+
 # print(piotrek)
 # print(piotrek.convert_to_dict())
 # print(vars(piotrek))
+
 
