@@ -75,7 +75,7 @@ def json_reader():
 
 # json_reader()
 
-# task 7
+# task 7, 8
 
 
 class Human:
@@ -83,4 +83,8 @@ class Human:
         self.age = age
         self.name = name
         self.surname = surname
-        
+
+    def __str__(self):
+        return f'{self.name} {self.surname} lat: {self.age}'
+
+
