@@ -23,3 +23,15 @@ except IndexError:
 except:
     print("Something goes wrong.")
 
+# task 2
+
+
+def name_printer(label=''):
+    name = label
+    try:
+        lenght_name = len(name)
+        if lenght_name == 0:
+            raise ValueError('Name required at least 1 character')
+    finally:
+        print(name)
+
