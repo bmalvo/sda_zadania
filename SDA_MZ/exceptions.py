@@ -46,3 +46,26 @@ def division_func(num1, num2):
         print('ZeroDivisionError: division by zero')
         return 0
 
+# task 4
+
+
+some_dict = {
+    'items': ['loundry machine', 'tv', 'vacum machine', 'fridge']
+}
+
+
+def get_item_with_try_except(d_ict):
+    try:
+        res = d_ict["items"]
+        return res
+    except KeyError:
+        return f'This dict has not key: "items".'
+
+
+def get_item_from_dict_with_get(d_ict):
+    res = d_ict.get('items', 'This dict has not got key "items"')
+    return res
+
+
+print(get_item_from_dict_with_get(some_dict))
+print(get_item_with_try_except(some_dict))
