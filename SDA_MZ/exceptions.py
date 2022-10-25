@@ -35,3 +35,14 @@ def name_printer(label=''):
     finally:
         print(name)
 
+# task 3
+
+
+def division_func(num1, num2):
+    try:
+        result = num1/num2
+        return result
+    except ZeroDivisionError:
+        print('ZeroDivisionError: division by zero')
+        return 0
+
