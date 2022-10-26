@@ -67,5 +67,30 @@ def get_item_from_dict_with_get(d_ict):
     return res
 
 
-print(get_item_from_dict_with_get(some_dict))
-print(get_item_with_try_except(some_dict))
+# print(get_item_from_dict_with_get(some_dict))
+# print(get_item_with_try_except(some_dict))
+
+# task 5
+
+
+class OrderItem:
+
+    def __init__(self, num):
+        self.num = num
+        self.numbs_list = []
+
+    def add_to_list(self):
+        if OrderItem(self.num).is_correct():
+            print(OrderItem(self.num).is_correct())
+            self.numbs_list.append(self.num)
+
+    def is_correct(self):
+        if not type(self.num) == int:
+            raise OrderItemError(ValueError)
+        else:
+            print('num must be an integer')
+            return False
+
+
+class OrderItemError(ValueError):
+    pass
