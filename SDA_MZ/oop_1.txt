@@ -1,0 +1,35 @@
+OOP – Object Oriented Programming – part 1:
+1. Napisz klasę Cat, która w konstruktorze przyjmować będzie imię kota. Klasa powinna
+posiadać metodę makeSound, która wypisywać będzie imię kota oraz wydawany przez niego
+dźwięk.
+2. Utwórz listę kotów, dodaj do niej parę utworzonych obiektów i dla wszystkich wywołaj
+metodę makeSound.
+3. Do klasy Cat dodaj metodę eatMouse, która będzie zliczała zjedzone przez kota myszy
+i wypisywała komunikat: „Zjadłem X myszy”.
+4. Napisz klasę Dog, która w konstruktorze przyjmować będzie imię psa. Klasa powinna
+posiadać metodę makeSound, która wypisywać będzie imię psa oraz wydawany przez
+niego dźwięk.
+5. Utwórz tablicę zwierząt, dodaj do niej parę utworzonych obiektów typu Cat oraz Dog i
+dla wszystkich wywołaj metodę makeSound.
+6. Napisz klasę abstrakcyjną Movable, która będzie zawierał metodę move. Napisz
+klasę Car rozszerzającą klasę Movable – w metodzie move ma wypisać komunikat
+„jadę”.
+7. Zmodyfikuj klasę Cat tak, żeby implementowała klasę abstrakcyjną Movable – w
+metodzie move ma wypisać komunikat „idę”.
+8. Utwórz klasę Vet, która będzie miała metodę sayCatHello przyjmującą jako parametr
+obiekt klasy Cat i wypisującą powitanie dla tego kota, np. „Witaj Mruczek”.
+9. W klasie Vet napisz metodę sayDogHello przyjmującą jako parametr obiekt klasy
+Dog i wypisującą powitanie dla tego psa, np. „Witaj Burek”.
+10. Zamiast dwóch wersji metody sayHello napisz jedną, która będzie wskazywała na
+przyjęcie w parametrze obiekty klas Cat oraz Dog (Tip – Obie klasy mogą mieć
+wspólną klasę abstrakcyjną Animal ).
+11. Napisz klasy: Rectangle, Circle i Triangle. Każda z tych klas powinna dziedziczyć z klasy
+abstrakcyjnej Figure i posiadać odpowiednie pola i konstruktor oraz nadpisać dziedziczoną
+metodę getArea - obliczającą pole:
+1. Prostokąta – wysokość * szerokość
+2. Koła – Pi * promień * promień
+3. Trójkąta – 1⁄2 * wysokość * podstawa
+12. Napisz metodę, która policzy łączne pole powierzchni paru utworzonych figur.
+13. Mając podaną powierzchnię X, która może zostać pokryta przez farbę, napisz metodę
+statyczną, która sprawdzi, czy daną ilością farby można zamalować wszystkie podane
+figury.
