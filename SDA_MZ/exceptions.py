@@ -94,3 +94,13 @@ class OrderItem:
 
 class OrderItemError(ValueError):
     pass
+
+# task 6
+
+
+def func_without_body():
+    raise NotImplementedError('Func do nothing')
+    pass
+
+
+# func_without_body()
