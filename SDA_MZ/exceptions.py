@@ -112,3 +112,6 @@ try:
         print(f.readlines())
 except FileNotFoundError:
     print('File doesn\'t exist')
+
+# task 8
+# For more knowledge visit the website -> https://realpython.com/python-exceptions/
