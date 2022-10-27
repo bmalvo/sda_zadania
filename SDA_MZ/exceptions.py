@@ -104,3 +104,11 @@ def func_without_body():
 
 
 # func_without_body()
+
+# task 7
+
+try:
+    with open('c:/not_exist/file') as f:
+        print(f.readlines())
+except FileNotFoundError:
+    print('File doesn\'t exist')
