@@ -23,22 +23,46 @@ class Cat:
 # task 2
 
 
-cats_list = []
+# cats_list = []
 
 cat1 = Cat('Ninja')
 cat2 = Cat('Zara')
 cat3 = Cat('Drapek')
 cat4 = Cat('Brydzia')
-cats_list.append(cat1)
-cats_list.append(cat2)
-cats_list.append(cat3)
-cats_list.append(cat4)
+# cats_list.append(cat1)
+# cats_list.append(cat2)
+# cats_list.append(cat3)
+# cats_list.append(cat4)
 
-for cat in cats_list:
-    print(cat.make_sound(), end=', ')
+# for cat in cats_list:
+#     print(cat.make_sound(), end=', ')
+#
+# print('\n')
+# print(cat1.eat_mouse())
+# print(cat1.eat_mouse())
+# print(cat1.eat_mouse())
+# print(cat3.eat_mouse())
 
-print('\n')
-print(cat1.eat_mouse())
-print(cat1.eat_mouse())
-print(cat1.eat_mouse())
-print(cat3.eat_mouse())
+# task 4
+
+
+class Dog:
+
+    def __init__(self, name='unnamed_dog'):
+        self.name = name
+
+    def __repr__(self):
+        return f'Dog - {self.name}'
+
+    def make_sound(self):
+        return f'{self.name}: Hau! Hau!'
+
+
+dog1 = Dog('Sharkey')
+dog2 = Dog('Biszkopt')
+dog3 = Dog('Czekolada')
+dog4 = Dog('Sindy')
+print(dog1)
+print(dog2)
+print(dog3)
+print(dog4)
