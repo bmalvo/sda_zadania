@@ -62,7 +62,15 @@ dog1 = Dog('Sharkey')
 dog2 = Dog('Biszkopt')
 dog3 = Dog('Czekolada')
 dog4 = Dog('Sindy')
-print(dog1)
-print(dog2)
-print(dog3)
-print(dog4)
+# print(dog1)
+# print(dog2)
+# print(dog3)
+# print(dog4)
+
+# task 5
+
+
+animals = [cat1, cat2, cat3, cat4, dog1, dog2, dog3, dog4]
+
+for animal in animals:
+    print(animal.make_sound())
