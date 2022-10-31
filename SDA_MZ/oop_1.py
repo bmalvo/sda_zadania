@@ -1,4 +1,7 @@
+from abc import ABC, abstractmethod
+
 # task 1,3
+
 
 class Cat:
 
@@ -72,5 +75,23 @@ dog4 = Dog('Sindy')
 
 animals = [cat1, cat2, cat3, cat4, dog1, dog2, dog3, dog4]
 
-for animal in animals:
-    print(animal.make_sound())
+# for animal in animals:
+#     print(animal.make_sound())
+
+# task 6
+
+
+class Movable(ABC):
+
+    def move(self):
+        pass
+
+
+class Car(Movable):
+
+    def move(self):
+        return f'I drive'
+
+
+ferrari = Car()
+print(ferrari.move())
