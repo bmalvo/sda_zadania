@@ -119,8 +119,24 @@ class Cat(Movable):
         return f'I sneak'
 
 
-ferrari = Car()
-print(ferrari.move())
+# ferrari = Car()
+# print(ferrari.move())
+# fifi = Cat('fifi')
+# print(fifi)
+# print(fifi.move())
+
+# task 8
+
+
+class Vet(ABC):
+
+    @staticmethod
+    def say_cat_hello(cat_name):
+        # cat_name = Cat(cat_name)
+        if isinstance(cat_name, Cat):
+            return f'Hello {cat_name.name}'
+        return f'There is no such cat.'
+
+
 fifi = Cat('fifi')
-print(fifi)
-print(fifi.move())
+print(Vet.say_cat_hello(fifi))
