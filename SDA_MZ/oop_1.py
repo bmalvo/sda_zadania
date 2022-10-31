@@ -132,11 +132,18 @@ class Vet(ABC):
 
     @staticmethod
     def say_cat_hello(cat_name):
-        # cat_name = Cat(cat_name)
         if isinstance(cat_name, Cat):
-            return f'Hello {cat_name.name}'
+            return f'Hello kittie {cat_name.name}!'
         return f'There is no such cat.'
 
+    @staticmethod
+    def say_dog_hello(dog_name):
+        if isinstance(dog_name, Dog):
+            return f'Hello doggie {dog_name.name}!'
+        return f'There is no such dog.'
 
-fifi = Cat('fifi')
+
+fifi = Cat('Fifi')
+pluto = Dog('Pluto')
 print(Vet.say_cat_hello(fifi))
+print(Vet.say_dog_hello(pluto))
