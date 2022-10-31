@@ -125,25 +125,21 @@ class Cat(Movable):
 # print(fifi)
 # print(fifi.move())
 
-# task 8
+# task 8, 9, 10
 
 
 class Vet(ABC):
 
     @staticmethod
-    def say_cat_hello(cat_name):
-        if isinstance(cat_name, Cat):
-            return f'Hello kittie {cat_name.name}!'
-        return f'There is no such cat.'
-
-    @staticmethod
-    def say_dog_hello(dog_name):
-        if isinstance(dog_name, Dog):
-            return f'Hello doggie {dog_name.name}!'
+    def say_pet_hello(pet_name):
+        if isinstance(pet_name, Cat):
+            return f'Hello kittie {pet_name.name}!'
+        if isinstance(pet_name, Dog):
+            return f'Hello doggie {pet_name.name}!'
         return f'There is no such dog.'
 
 
 fifi = Cat('Fifi')
 pluto = Dog('Pluto')
-print(Vet.say_cat_hello(fifi))
-print(Vet.say_dog_hello(pluto))
+print(Vet.say_pet_hello(fifi))
+print(Vet.say_pet_hello(pluto))
