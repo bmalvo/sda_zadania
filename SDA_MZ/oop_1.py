@@ -159,6 +159,18 @@ class Figure(ABC):
             joint_areas += figure.get_area()
         return round(joint_areas, 2)
 
+    @staticmethod
+    def enough_paint(colors_amount, *figures):
+        colors_amount = colors_amount
+        area_figures = 0
+        for figure in figures:
+            area_figures += figure.get_area()
+        if colors_amount >= area_figures:
+            response = f'Enough colors and can paint {round(colors_amount-area_figures,2)} more.'
+        else:
+            response = f'You need more colors for {round(abs(colors_amount-area_figures),2)} area'
+        return response
+
 
 class Triangle(Figure):
 
@@ -197,3 +209,5 @@ print(triangle.get_area())
 print(rectangle.get_area())
 print(circle.get_area())
 print(Figure.sum_area(triangle, rectangle, circle))
+print(Figure.enough_paint(1500, triangle, rectangle, circle))
+print(Figure.enough_paint(1200, triangle, rectangle, circle))
