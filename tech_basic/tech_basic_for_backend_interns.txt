@@ -1,0 +1,12 @@
+JSON:
+
+What is JSON? Where is it used? Why JSON?
+
+- JavaScript Object Notation (JSON) is a standard text-based format for representing structured
+data based on JavaScript object syntax. It is commonly used for transmitting data in web
+applications (e.g., sending some data from the server to the client, so it can be displayed on a
+web page, or vice versa).
+- Data is stored in a set of key-value pairs. This data is human readable, which makes JSON perfect
+for manual editing. From this little snippet you can see that keys are wrapped in double quotes,
+a colon separates the key and the value, and the value can be of different types. Key-value sets
+are separated by a comma.
