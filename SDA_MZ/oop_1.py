@@ -144,13 +144,20 @@ pluto = Dog('Pluto')
 # print(Vet.say_pet_hello(fifi))
 # print(Vet.say_pet_hello(pluto))
 
-# task 11
+# task 11, 12
 
 
 class Figure(ABC):
 
     def get_area(self):
         return 'Not defined function'
+
+    @classmethod
+    def sum_area(cls, *figures):
+        joint_areas = 0
+        for figure in figures:
+            joint_areas += figure.get_area()
+        return round(joint_areas, 2)
 
 
 class Triangle(Figure):
@@ -189,3 +196,4 @@ circle = Circle(7)
 print(triangle.get_area())
 print(rectangle.get_area())
 print(circle.get_area())
+print(Figure.sum_area(triangle, rectangle, circle))
