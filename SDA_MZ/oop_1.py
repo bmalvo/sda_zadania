@@ -136,10 +136,56 @@ class Vet(ABC):
             return f'Hello kittie {pet_name.name}!'
         if isinstance(pet_name, Dog):
             return f'Hello doggie {pet_name.name}!'
-        return f'There is no such dog.'
+        return f'There is no such animal.'
 
 
 fifi = Cat('Fifi')
 pluto = Dog('Pluto')
-print(Vet.say_pet_hello(fifi))
-print(Vet.say_pet_hello(pluto))
+# print(Vet.say_pet_hello(fifi))
+# print(Vet.say_pet_hello(pluto))
+
+# task 11
+
+
+class Figure(ABC):
+
+    def get_area(self):
+        return 'Not defined function'
+
+
+class Triangle(Figure):
+
+    def __init__(self, base_side, height):
+        self.base_side = base_side
+        self.height = height
+
+    def get_area(self):
+        return self.base_side * self.height / 2
+
+
+class Circle(Figure):
+
+    def __init__(self, ray):
+        self.ray = ray
+        self.pi = 3.14
+
+    def get_area(self):
+        return self.pi * self.ray * self.ray
+
+
+class Rectangle(Figure):
+
+    def __init__(self, height, width):
+        self.height = height
+        self.width = width
+
+    def get_area(self):
+        return self.height * self.width
+
+
+triangle = Triangle(40, 18)
+rectangle = Rectangle(40, 20)
+circle = Circle(7)
+print(triangle.get_area())
+print(rectangle.get_area())
+print(circle.get_area())
