@@ -1,0 +1,21 @@
+1. Utwórz klasę Person posiadającą pola imię, nazwisko, data urodzenia.
+2. Utwórz te pola jako protected (_pole – ma jedno podkreślenie). Dodaj do pól tej klasy
+property oraz settery.
+3. Utwórz klasę Employee dziedziczącą po klasie Person.
+4. Zmodyfikuj klasę Employee w taki sposób, żeby przy podaniu roku urodzenia z
+zakresu innego niż 1900-2020 ustawiało rok urodzenia na 0 – modyfikacja metody
+property.
+5. Do klasy Employee dodaj pole salary oraz metodę @property salary. Zrób tak, aby metoda
+who_am_i dla pracownika wyświetlała tekst „Nazywam się Jan Kowalski i zarabiam
+1000zł”
+6. Utwórz klasę Manager dziedziczącą po klasie Employee. Dla managera do pensji dodawane
+jest 10% jako dodatek funkcyjny. Zmodyfikuj odpowiednio metodę @property salary. Zrób
+tak, aby metoda who_am_i dla pracownika wyświetlała tekst „Nazywam się manager Jan
+Kowalski i zarabiam 1000zł”
+7. Utwórz klasy Mammal (ssak) i Canidae (psowate). Zmodyfkuj klasę Dog tak,
+aby dziedziczyła po klasach Mammal i Canidae
+8. Czy któraś z tworzonych przez nas klas mogłaby być oznaczona jako abstrakcyjna? Jeśli tak
+wprowadź tą abstrakcję.
+9. Zastanów się nad modyfikatorami dostępu (wskazanie poprzez podkreślniki) do klas
+Person, Employee oraz Manager. Które powinny być publiczne, chronione i prywatne?
+10. Zastanów się co można dodać do tych klas.
