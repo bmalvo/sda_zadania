@@ -38,3 +38,8 @@ class Person:
         else:
             self._birth_year = year
 
+# task 3
+
+
+class Employee(Person):
+    pass
