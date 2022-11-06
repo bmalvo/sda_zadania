@@ -44,6 +44,9 @@ decide to create a new resource or not).
 If the request passes through a cache and the Request-URI identifies one or more currently cached
 entities, those entries SHOULD be treated as stale. Responses to PUT method are not cacheable.
 
+- The difference between the POST and PUT APIs can be observed in request URIs. POST requests are
+made on resource collections, whereas PUT requests are made on a single resource.
+
 - HTTP DELETE
 As the name applies, DELETE APIs delete the resources (identified by the Request-URI).
 
