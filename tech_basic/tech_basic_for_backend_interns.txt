@@ -15,6 +15,9 @@ REST API:
 
 What does acronym REST API stand for? HTTP protocol, status codes, requests and responses
 
+- REST APIs enable you to develop all kinds of web applications having all possible CRUD (create,
+retrieve, update, delete) operations.
+
 - REST is an acronym for REpresentational State Transfer and an architectural style for distributed
 hypermedia systems. Like other architectural styles,REST has its guiding principles and constraints.
 These principles must be satisfied if a service interface needs to be referred to as RESTful.
