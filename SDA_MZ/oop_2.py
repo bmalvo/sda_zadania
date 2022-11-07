@@ -39,7 +39,7 @@ class Person:
         else:
             self._birth_year = year
 
-# task 3, 4
+# task 3, 4, 5
 
 
 class Employee(Person):
@@ -66,6 +66,19 @@ class Employee(Person):
     def who_am_i(self):
         return f'My name is {self.name}-{self.surname} and my salary is: {self.salary}$'
 
+# task 6
+
+
+class Manager(Employee):
+
+    @Employee.salary.setter
+    def salary(self, value):
+        extra_duty = value * 0.1
+        self._salary = value + extra_duty
+
+    def who_am_i(self):
+        return f'My name is manager {self.name}-{self.surname} and my salary is: {self.salary}$'
+
 
 John = Employee('John', "Rambo", 1954)
 print(John.birth_year)
@@ -73,6 +86,9 @@ assert John.birth_year == 1954
 print(John.name)
 print(John.surname)
 print(John.salary)
-John.salary = 13000
+John.salary = 3800
 print(John.salary)
 print(John.who_am_i())
+Pietruszynski = Manager('Wojtek', 'Pietruszynski', 1995)
+Pietruszynski.salary = 12500
+print(Pietruszynski.who_am_i())
