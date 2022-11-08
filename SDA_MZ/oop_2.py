@@ -94,8 +94,10 @@
 # print(Pietruszynski.who_am_i())
 
 # task 7
+from abc import ABC
 
-class Mammal:
+
+class Mammal(ABC):
 
     def mammal_introducing(self):
         return 'I am a mammal. '
