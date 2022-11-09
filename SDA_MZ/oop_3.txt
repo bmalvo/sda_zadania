@@ -1,0 +1,47 @@
+1. Dla podanej liczby oznaczającej numer dnia tygodnia, wypisz nazwę tego dnia. Użyj
+kolekcji dict.
+2. Do klasy Person dodaj informację o płci.
+3. Napisz klasę Complex do obsługi liczb zespolonych. Klasa powinna posiadać:
+a) Konstruktor – z jednym parametrem
+b) Następnie dodaj drugi parametr z wartością domyślną, czyli gdy część urojona jest
+równa zero
+c) Metodę show wypisującą liczbę w postaci a + b*i (pamiętaj o przypadkach, gdy
+część urojona jest równa zero lub mniejsza od zera)
+4. Zamiast metody show nadpisz metodę __str__.
+5. Do klasy Complex dopisz metodę is_equal_to, która sprawdzi, czy bieżący obiekt ma
+takie same części rzeczywistą i urojoną jak liczba przekazana w parametrze tej funkcji.
+Przykład:
+z1 = 3 + 5i
+z2 = 3 + 5i
+z3 = 5 + 3i
+z1. is_equal_to(z2) // true
+z2. is_equal_to(z3) // false
+6. Zamiast metody is_equal_to nadpisz metodę __eq__.
+7. Napisz statyczną metodę, która dodaje dwie liczby zespolone.
+8. Napisz statyczną metodę, która do danej liczby zespolonej doda drugą liczbę zespoloną.
+9. Napisz statyczną metodę, która dodaje trzy liczby zespolone.
+10. Napisz statyczną metodę, która dodaje dowolną ilość liczb zespolonych.
+11. Napisz klasę OrderItem (pozycja zamówienia):
+a) będzie ona przechowywała następujące informacje:
+1. Nazwa produktu
+2. Ilość
+3. Cena jednostkowa
+b) Napisz odpowiedni konstruktor.
+c) Klasa powinna również zawierać metody:
+1. get_value – oblicza wartość danej pozycji zamówienia
+2. is_correct – sprawdza, czy pozycja jest prawidłowa, tzn. ilość i cena
+są większe od zera
+3. show – wyświetla daną pozycję zamówienia, np. Cukier 4,00 zł 3 szt 12,00 zł
+12. Napisz klasę Order (zamówienie):
+a) w tablicy będzie ona przechowywała pozycje zamówienia (- kompozycja).
+b) Napisz konstruktor, który utworzy zamówienie o zadanej liczbie pozycji.
+c) Klasa powinna również zawierać metody:
+1. add_item – dodaje pozycję zamówienia, ale tylko wtedy, gdy w
+zamówieniu jest jeszcze miejsce i jeżeli pozycja zamówienia jest
+prawidłowa
+2. get_value – oblicza łączną wartość zamówienia
+3. Get_items_count – oblicza łączną liczbę zamówionych produktów
+4. show – wyświetla dane zamówienia,
+np. Chleb 3,50zł 1 szt 3,50zł
+Cukier 4,00 zł 3 szt 12,00 zł
+Wartość zamówienia: 15,50 zł
