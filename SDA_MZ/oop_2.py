@@ -40,6 +40,14 @@ class Person:
         else:
             self._birth_year = year
 
+    @property
+    def sex(self):
+        return self._sex
+
+    @sex.setter
+    def sex(self, value):
+        self._sex = value
+
 # task 3, 4, 5
 
 
@@ -83,6 +91,10 @@ class Manager(Employee):
 #
 John = Employee('John', "Rambo", 1954)
 print(John.birth_year)
+print(John.sex)
+John.sex = 'Male'
+print(John.sex)
+
 # assert John.birth_year == 1954
 # print(John.name)
 # print(John.surname)
