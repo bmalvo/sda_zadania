@@ -10,7 +10,7 @@ week_days = {
     7: 'sunday'
 }
 
-# task 3
+# task 3, 4
 
 
 class Complex:
@@ -19,7 +19,7 @@ class Complex:
         self.reality = reality
         self.imaginary = imaginary
 
-    def show(self):
+    def __str__(self):
         sign = '+'
         if self.reality == 0:
             reality = ""
@@ -40,4 +40,4 @@ class Complex:
 
 
 numb = Complex(6, -4)
-print(numb.show())
+print(numb)
