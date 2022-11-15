@@ -11,7 +11,7 @@ week_days = {
 }
 
 
-# task 3, 4, 5, 6, 7, 9
+# task 3, 4, 5, 6, 7, 9, 10
 
 
 class Complex:
@@ -24,6 +24,7 @@ class Complex:
         sign = '+'
         if self.reality == 0:
             reality = ""
+            sign = ''
         else:
             reality = self.reality
         if self.imaginary == 1:
@@ -50,6 +51,12 @@ class Complex:
     def add_three_complex(cx1, cx2, cx3):
         return f'{(cx1.reality + cx2.reality + cx3.reality) + (cx1.imaginary + cx2.imaginary + cx3.imaginary)}i'
 
+    @staticmethod
+    def add_multiple_complex(*cx):
+        reality_all = sum([num.reality for num in cx])
+        imaginary_all = sum([num.imaginary for num in cx])
+        return f'{reality_all + imaginary_all}i'
+
 
 numb1 = Complex(6, -4)
 print(numb1)
@@ -59,4 +66,4 @@ print(numb1.__eq__(numb3))
 print(numb1.__eq__(numb2))
 print(Complex.add_complex(numb1, numb2))
 print(Complex.add_three_complex(numb1, numb2, numb3))
-
+print(Complex.add_multiple_complex(numb1, numb2, numb3))
