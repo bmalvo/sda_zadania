@@ -10,7 +10,7 @@ week_days = {
     7: 'sunday'
 }
 
-# task 3, 4
+# task 3, 4, 5
 
 
 class Complex:
@@ -38,6 +38,13 @@ class Complex:
         result = f'{reality} {sign} {imaginary}'
         return result
 
+    def is_equal_to(self, number):
+        return self.reality == number.reality and self.imaginary == number.imaginary
 
-numb = Complex(6, -4)
-print(numb)
+
+numb1 = Complex(6, -4)
+print(numb1)
+numb2 = Complex(6, -4)
+numb3 = Complex(0, 4)
+print(numb2.is_equal_to(numb1))
+print(numb2.is_equal_to(numb3))
