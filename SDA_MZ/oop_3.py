@@ -38,7 +38,7 @@ class Complex:
         result = f'{reality} {sign} {imaginary}'
         return result
 
-    def is_equal_to(self, number):
+    def __eq__(self, number):
         return self.reality == number.reality and self.imaginary == number.imaginary
 
 
@@ -46,5 +46,5 @@ numb1 = Complex(6, -4)
 print(numb1)
 numb2 = Complex(6, -4)
 numb3 = Complex(0, 4)
-print(numb2.is_equal_to(numb1))
-print(numb2.is_equal_to(numb3))
+print(numb1.__eq__(numb3))
+print(numb1.__eq__(numb2))
