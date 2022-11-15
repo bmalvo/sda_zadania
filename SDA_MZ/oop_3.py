@@ -10,7 +10,7 @@ week_days = {
     7: 'sunday'
 }
 
-# task 3, 4, 5
+# task 3, 4, 5, 6, 7
 
 
 class Complex:
@@ -41,6 +41,10 @@ class Complex:
     def __eq__(self, number):
         return self.reality == number.reality and self.imaginary == number.imaginary
 
+    @staticmethod
+    def add_complex(cx_1, cx_2):
+        return f'{(cx_1.reality + cx_2.reality)+(cx_1.imaginary + cx_2.imaginary)}i'
+
 
 numb1 = Complex(6, -4)
 print(numb1)
@@ -48,3 +52,4 @@ numb2 = Complex(6, -4)
 numb3 = Complex(0, 4)
 print(numb1.__eq__(numb3))
 print(numb1.__eq__(numb2))
+print(Complex.add_complex(numb1, numb2))
