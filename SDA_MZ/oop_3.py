@@ -92,8 +92,43 @@ class OrderItem:
 
 
 sugar = OrderItem('sugar', 3, 4)
-print(sugar.get_value())
+# print(sugar.get_value())
 drugs = OrderItem('vaccine', 3, 55)
-print(drugs.get_value())
-print(drugs.is_correct())
-print(drugs.show())
+# print(drugs.get_value())
+# print(drugs.is_correct())
+# print(drugs.show())
+
+# task 12
+
+
+class Order:
+
+    def __init__(self, name, amount):
+        self.name = name
+        self.amount = amount
+
+    def add_item(self):
+        order_list = []
+        if isinstance(self.name, OrderItem):
+
+            order_list.append(self.name)
+            
+        else:
+            return f'{self.name} is not on stack'
+        return print(order_list)
+        pass
+
+    def get_value(self):
+        pass
+
+    def get_items_count(self):
+        pass
+
+    def show(self):
+        pass
+
+
+order1 = Order(sugar, 1)
+# order1.add_item()
+print(sugar.amount)
+print(order1.amount)
