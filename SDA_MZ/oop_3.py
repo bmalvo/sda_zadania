@@ -71,9 +71,9 @@
 # task 11
 
 class OrderItem:
-    def __init__(self, name, amount, retail_price):
+    def __init__(self, name, amount_available, retail_price):
         self.name = name
-        self.amount = amount
+        self.amount = amount_available
         self.price = retail_price
 
     def get_value(self):
@@ -100,35 +100,34 @@ drugs = OrderItem('vaccine', 3, 55)
 
 # task 12
 
+from decimal import Decimal
+
 
 class Order:
 
-    def __init__(self, name, amount):
-        self.name = name
-        self.amount = amount
+    def __init__(self, list_of_items=None):
+        if list_of_items is None:
+            list_of_items = []
+        self.list_of_items = list_of_items
 
-    def add_item(self):
-        order_list = []
-        if isinstance(self.name, OrderItem):
-
-            order_list.append(self.name)
-            
-        else:
-            return f'{self.name} is not on stack'
-        return print(order_list)
-        pass
+    def add_item(self, item: OrderItem):
+        self.list_of_items.append(item)
 
     def get_value(self):
-        pass
+        sum = Decimal(0)
+        for item in self.list_of_items:
+            sum += item.amount
+        return sum
 
-    def get_items_count(self):
-        pass
+    def get_items_count(self) -> int:
+        return len(self.list_of_items)
 
     def show(self):
-        pass
+        print('---Order---')
+        for item in self.list_of_items:
+            print(item.name)
 
 
-order1 = Order(sugar, 1)
-# order1.add_item()
-print(sugar.amount)
-print(order1.amount)
+order1 = Order([sugar,drugs])
+print(order1.get_value())
+order1.show()
