@@ -128,6 +128,6 @@ class Order:
             print(item.name)
 
 
-order1 = Order([sugar,drugs])
+order1 = Order([sugar, drugs])
 print(order1.get_value())
 order1.show()
